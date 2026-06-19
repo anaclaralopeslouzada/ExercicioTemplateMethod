@@ -4,11 +4,9 @@ namespace ExercicioTemplateMethod
 { 
     public class ComparadorUltimaLetra : ComparadorPalavraBase
     {
-        protected override int CompararCriterioPrincipal(string x, string y)
+        protected override int CompararCriterioPrincipal(string? x, string? y)
         {
-            if (x.Lenght == 0 & y.Length == 0) return 0;
-            if (x.Lenght == 0) return -1;
-            if (y.Length == 0) return 1;
+            if ( x == null || y == null) return 0;
 
             char ultimaLetraX = x[x.Length -1];
             char ultimaLetraY = y[y.Length -1];
