@@ -5,7 +5,7 @@ namespace ExercicioTemplateMethod
 {
     public abstract class ComparadorPalavraBase : IComparer<string>
     {
-        public int Compare(string x, string y)
+        public int Compare(string? x, string? y)
         {
             if (x == null && y == null) return 0;
             if (x == null) return -1;
@@ -21,6 +21,6 @@ namespace ExercicioTemplateMethod
             return resultado;
         }
 
-        protected abstract int CompararCriterioPrincipal(string x, string y);
+        protected abstract int CompararCriterioPrincipal(string? x, string? y);
     }
 }
