@@ -4,9 +4,11 @@ namespace ExercicioTemplateMethod
 {
     public class ComparadorTamanho : ComparadorPalavraBase
     {
-        protected override int CompararCriterioPrincipal(string x, string y)
+        protected override int CompararCriterioPrincipal(string? x, string? y)
         {
-            return x.Length.CompareTo(y.Length;)
+            if (x == null || y == null) return 0;
+            
+            return x.Length.CompareTo(y.Length);
         }
     }
 }
